@@ -1,0 +1,51 @@
+/* Print Screen  */
+
+@page {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.head {
+    font-size: 14px !important;
+}
+
+.btn-printable,
+.btn-back,
+.alert,
+.alert-close {
+    display: none !important;
+}
+
+
+th,td {
+    color: #222529 !important;
+    padding-block: 10px !important;
+}
+
+.total-expense-label, 
+.total-revenue-label,
+.caption {
+    color: #111;
+    margin-top: 5px;
+    margin-bottom: 10px !important;
+}
+
+.not-print {
+    display: none !important;
+}
+
+
+.brand-copyright {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 30%;
+    color: #222;
+    font-size: 1.2rem !important;
+}
+
+
+
+
+

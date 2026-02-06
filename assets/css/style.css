@@ -1,0 +1,265 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fc;
+}
+
+
+/* Login screen */
+
+.container-body { 
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+
+.card-body { 
+    font-size: 1.19rem;
+}
+
+.login-card {
+    width: 90% !important;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    height: 95vh;
+}
+
+.btn-login {
+    background: #4e73df;
+    border: none;
+}
+
+.btn-login:hover {
+    background: #2e59d9;
+}
+
+.btn-primary { 
+    background: #4e73df; 
+    border: none; 
+}
+
+/* Welcome Card */
+.welcome-card { 
+    width: 90%;
+    margin: auto; 
+    border-radius: 20px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+}
+
+.form-container {
+    max-width: 500px;
+    border: 1px solid #ddd;
+}
+
+/* Sidebar Layout */
+.sidebar {
+    width: 280px;
+    height: auto;
+    transition: width 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, #4e73df, #1c3faa);
+}
+
+.main-content {
+    margin-inline: auto;
+    margin-left: 380px;
+    transition: margin-left 0.3s ease;
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-inline-start: 30px;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #f8f9fa !important;
+    border-radius: 8px;
+    margin: 4px 10px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link i {
+    width: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.sidebar .nav-link span {
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-item.active .nav-link {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff !important;
+}
+
+.sidebar .nav-item.active .nav-link {
+    background-color: rgba(255, 255, 255, 0.35);
+    font-weight: 600;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed + .main-content {
+    margin-left: 80px;
+}
+
+/* Notification badge styles */
+.notification-badge {
+    left: 30px !important;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+    .main-content {
+        margin-left: 0 !important;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .table {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar {
+    background: linear-gradient(180deg, #343a40, #212529) !important;
+}
+
+body.dark-mode .alert-success {
+    background-color: #2b5230;
+    color: #d4edda;
+}
+
+body.dark-mode .alert-danger {
+    background-color: #592b2b;
+    color: #f8d7da;
+}
+
+/* Dark Mode Button Alignment */
+#darkModeToggle.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: inherit !important;
+    border-radius: 8px;
+    margin: 4px 10px;
+    width: calc(100% - 20px);
+    text-align: left;
+}
+
+#darkModeToggle.nav-link i {
+    width: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#darkModeToggle.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Icon only version */
+/* #darkModeToggle.nav-link i:only-child {
+    margin: 0 auto;
+} */
+
+/* Media Screens */
+@media screen and (min-width:576px) {
+
+}
+
+@media screen and (min-width:768px) {
+    .container-body { 
+    height: 100vh !important;
+    }  
+
+   .login-card {
+    max-width: 500px;
+    height: fit-content !important;
+   }
+
+   #accordionSidebar {
+    width: 350px;
+    }
+
+    .card-body { 
+        font-size: 1.25rem;
+    }
+
+    .welcome-card { 
+    max-width: 600px; 
+    }
+}
+
+@media screen and (min-width:992px) {
+    .login-card {
+        max-width: 650px;
+    }
+}
